@@ -31,9 +31,14 @@ namespace AlgorithmsDataStructures
             LinkedList s_list = new LinkedList();
             s_list.AddInTail(new Node(5));
             s_list.AddInTail(new Node(5));
-            s_list.AddInTail(new Node(10));
+            s_list.AddInTail(new Node(7));
+            s_list.AddInTail(new Node(8));
+            s_list.AddInTail(new Node(9));
             s_list.AddInTail(new Node(5));
-            s_list.AddInTail(new Node(20));
+            s_list.AddInTail(new Node(11));
+            s_list.AddInTail(new Node(12));
+            s_list.AddInTail(new Node(13));
+            s_list.AddInTail(new Node(5));
             Console.WriteLine("Начальное состояние списка");
             s_list.PrintNode();
 
