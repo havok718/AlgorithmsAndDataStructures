@@ -149,10 +149,6 @@ namespace AlgorithmsDataStructures
             // если _nodeAfter = null и список пустой, 
             // добавьте новый элемент первым в списке
             Node node = head;
-            if (head == null)
-            {
-                head = _nodeToInsert;
-            }
             while (node != null)
             {
                 if (node.value == _nodeAfter.value)
@@ -161,6 +157,10 @@ namespace AlgorithmsDataStructures
                     node.next = _nodeToInsert;
                 }
                 node = node.next;
+            }
+            if (node == null)
+            {
+                head = _nodeToInsert;
             }
         }
 
