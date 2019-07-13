@@ -109,10 +109,15 @@ namespace AlgorithmsDataStructures
                     {
                         head = head.next;
                     }
+                    if (current.next == null)
+                    {
+                        tail = previous;
+                    }
                 }
                 else
                 {
                     previous = current;
+                    
                 }
                 current = current.next;
             }
