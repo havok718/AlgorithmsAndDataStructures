@@ -94,38 +94,26 @@ namespace AlgorithmsDataStructures
         public void RemoveAll(int _value)
         {
             // здесь будет ваш код удаления всех узлов по заданному значению
-            Node current = head;
             Node previous = null;
+            Node current = head;
+
             while (current != null)
             {
-                if (current.value == _value)
+                if(current.value == _value)
                 {
-                    if (previous == null)
+                    if (previous != null)
                     {
-                        if (head == null)
-                        {
-                            tail = null;
-                        }
-                        else
-                        {
-                            head = current.next;
-                        }
+                        previous.next = current.next;
                     }
                     else
                     {
-                        previous.next = current.next;
-
-                        if (current.next == null)
-                        {
-                            tail = previous;
-                        }
-                        if (head == current)
-                        {
-                            head = current.next;
-                        }
+                        head = head.next;
                     }
                 }
-                previous = current;
+                else
+                {
+                    previous = current;
+                }
                 current = current.next;
             }
         }
