@@ -151,7 +151,13 @@ namespace AlgorithmsDataStructures
             Node node = head;
             while (node != null)
             {
-                if (head.value == _nodeAfter.value)
+                if (head.value == _nodeAfter.value && tail.value == _nodeAfter.value)
+                {
+                    head.next = _nodeToInsert;
+                    tail = _nodeToInsert;
+                    break;
+                }
+                else if (head.value == _nodeAfter.value)
                 {
                     _nodeToInsert.next = head.next;
                     head.next = _nodeToInsert;
