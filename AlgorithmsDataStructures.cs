@@ -161,6 +161,7 @@ namespace AlgorithmsDataStructures
             if (head == null && _nodeAfter == null)
             {
                 head = _nodeToInsert;
+                tail = _nodeToInsert;
             }
         }
 
