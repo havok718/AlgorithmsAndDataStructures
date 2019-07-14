@@ -158,7 +158,7 @@ namespace AlgorithmsDataStructures
                 }
                 node = node.next;
             }
-            if (node == null)
+            if (head == null)
             {
                 head = _nodeToInsert;
             }
