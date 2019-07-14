@@ -166,6 +166,7 @@ namespace AlgorithmsDataStructures
                 else if (tail.value == _nodeAfter.value)
                 {
                     tail.next = _nodeToInsert;
+                    tail = _nodeToInsert;
                     break;
                 }
                 else if (node.value == _nodeAfter.value)
